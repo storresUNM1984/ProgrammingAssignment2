@@ -146,6 +146,6 @@ cacheSolve <- function(x,...) {
 
 Prove!
 
-my_matrix <- makeCacheMatrix(matrix(1:9, 3, 3))
+my_matrix <- makeCacheMatrix(matrix(1:4, 2, 2))
 my_matrix$getInverse()
 cacheSolve(my_matrix)
