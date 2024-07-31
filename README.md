@@ -107,6 +107,7 @@ In order to complete this assignment, you must do the following:
 This assignment will be graded via peer assessment.
 
 #First function
+## This function will obtain a special "matrix" object that can cache its inverse.
 
 makeCacheMatrix <- function(x = matrix()) {
   inv <- NULL
@@ -129,7 +130,11 @@ makeCacheMatrix <- function(x = matrix()) {
 
 #Second Function
 
+## This function obtains the inverse of the special "matrix" got by 
+makeCacheMatrix function. If the inverse has already been calculated (and the  matrix has not changed), then it should retrieve the inverse from the cache.
+
 cacheSolve <- function(x,...) {
+## Return a matrix that is the inverse of 'x'
   inverse <- x$getinverse()
   if (!is.null(inverse)) {
     return(inverse)
@@ -139,5 +144,8 @@ cacheSolve <- function(x,...) {
   #return(m)
 }
 
+Prove!
 
-
+my_matrix <- makeCacheMatrix(matrix(1:9, 3, 3))
+my_matrix$getInverse()
+cacheSolve(my_matrix)
